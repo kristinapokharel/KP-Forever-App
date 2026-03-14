@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="installApp">📱 Install App</button>
+    <button onclick="showInstallGuide()">📱 Install App</button>
     
 
     <script type="module">
@@ -35,6 +35,35 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+
+
+
+/* ---------- SIMPLE LOGIN SYSTEM ---------- */
+
+const loginBtn = document.getElementById("loginBtn");
+
+if(loginBtn){
+
+loginBtn.onclick = function(){
+
+const username = document.getElementById("username").value.trim();
+const password = document.getElementById("password").value.trim();
+const error = document.getElementById("error");
+
+if(username === "kristina" && password === "pranish"){
+
+localStorage.setItem("loggedIn","true");
+window.location.href = "home.html";
+
+}else{
+
+error.textContent = "Wrong username or password ❤️";
+
+}
+
+};
+
+}
 </script>
 
     <div class="login-container">
@@ -45,7 +74,19 @@ const db = getDatabase(app);
         <p id="error" class="error"></p>
     </div>
 
+
+
+
+    
+
    
 <script type="module" src="script.js"></script>
+
+
+
 </body>
+
+
+
+
 </html>

@@ -1,6 +1,22 @@
 // ------------------- FIREBASE SETUP -------------------
-if(localStorage.getItem("access") !== "granted"){
-window.location.href = "access.html";
+
+/* ---------- PAGE PROTECTION ---------- */
+
+if(!window.location.pathname.includes("index.html")){
+
+if(localStorage.getItem("loggedIn") !== "true"){
+window.location.href = "index.html";
+}
+
+}
+
+
+if(
+localStorage.getItem("access") !== "granted" &&
+!window.location.pathname.includes("index.html") &&
+!window.location.pathname.includes("access.html")
+){
+window.location.href = "home.html";
 }
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
@@ -75,3 +91,10 @@ deferredPrompt = null;
 }
 
 });
+
+
+function showInstallGuide(){
+
+alert("To install this app on iPhone:\n\n1. Open in Safari\n2. Tap Share button\n3. Tap 'Add to Home Screen' ❤️");
+
+}
