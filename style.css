@@ -1,0 +1,681 @@
+/* GENERAL PAGE STYLE */
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    padding:40px 10px;
+}
+
+/* TITLE */
+h1{
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+p{
+    opacity:0.8;
+}
+
+/* HOME PAGE LINKS */
+a{
+    text-decoration:none;
+}
+
+body a{
+    display:inline-block;
+    background:#ff4d6d;
+    color:white;
+    padding:10px 18px;
+    margin:6px;
+    border-radius:20px;
+    font-size:14px;
+    transition:0.2s;
+}
+
+body a:hover{
+    background:#ff2f55;
+    transform:scale(1.05);
+}
+
+/* CHAT CONTAINER */
+.chat-container{
+    width:95%;
+    max-width:420px;
+    margin:auto;
+    background:#f1f5f9;
+    border-radius:20px;
+    padding:15px;
+    color:black;
+}
+
+/* CHAT BOX */
+.chat-box{
+    height:350px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* MY MESSAGE */
+.myMessage{
+    align-self:flex-end;
+    background:#ff4d6d;
+    color:white;
+    padding:10px 14px;
+    border-radius:18px 18px 4px 18px;
+    max-width:75%;
+}
+
+/* THEIR MESSAGE */
+.theirMessage{
+    align-self:flex-start;
+    background:#1e293b;
+    color:white;
+    padding:10px 14px;
+    border-radius:18px 18px 18px 4px;
+    max-width:75%;
+}
+
+/* AUDIO PLAYER */
+audio{
+    width:160px;
+    margin-top:5px;
+}
+
+/* CHAT INPUT */
+.chat-input-area{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+#chatInput{
+    flex:1;
+    padding:10px;
+    border-radius:20px;
+    border:none;
+}
+
+#sendBtn{
+    background:#ff4d6d;
+    border:none;
+    padding:10px 16px;
+    color:white;
+    border-radius:20px;
+}
+
+/* MEMORIES IMAGES FIX */
+img{
+    max-width:45%;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:5px;
+}
+
+/* MOBILE FIX FOR IPHONE */
+@media (max-width:500px){
+
+h1{
+font-size:26px;
+}
+
+img{
+max-width:48%;
+height:110px;
+}
+
+}
+/* REMOVE BIG GAP / FIX PAGE HEIGHT */
+body{
+margin:0;
+padding:20px 10px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+/* HOME PAGE IMPROVEMENT */
+h1{
+font-size:34px;
+margin-top:40px;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+p{
+opacity:0.85;
+margin-bottom:25px;
+}
+
+/* NAVIGATION LINKS LOOK LIKE BUTTONS */
+body a{
+display:inline-block;
+margin:6px 4px;
+padding:10px 16px;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+transition:0.2s;
+}
+
+body a:hover{
+background:#ff2f55;
+transform:scale(1.05);
+}
+
+/* MEMORIES PAGE FIX (IMAGES SMALLER & CLEAN GRID) */
+img{
+width:45%;
+max-width:180px;
+height:120px;
+object-fit:cover;
+border-radius:12px;
+margin:6px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* CENTER MEMORIES IMAGES */
+body{
+text-align:center;
+}
+
+/* MOBILE (IPHONE) OPTIMIZATION */
+@media (max-width:500px){
+
+h1{
+font-size:28px;
+}
+
+body a{
+font-size:13px;
+padding:9px 14px;
+}
+
+img{
+width:46%;
+height:110px;
+}
+
+}
+/* FIX BIG GAP ON HOME PAGE */
+body{
+margin:0;
+padding:20px 15px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
+
+/* TITLE */
+h1{
+margin-top:20px;
+margin-bottom:5px;
+font-size:32px;
+}
+
+/* SUBTITLE */
+p{
+margin-top:5px;
+margin-bottom:15px;
+opacity:0.8;
+}
+
+/* NAV BUTTON LINKS */
+body a{
+display:inline-block;
+margin:5px 4px;
+padding:8px 14px;
+background:#ff4d6d;
+color:white;
+border-radius:18px;
+text-decoration:none;
+font-size:14px;
+transition:0.2s;
+}
+
+body a:hover{
+background:#ff2f55;
+}
+
+/* REMOVE EXTRA SPACE BELOW */
+body::after{
+content:"";
+display:block;
+height:10px;
+}
+
+
+
+
+
+
+/* ===== RESET LAYOUT (fix big gaps) ===== */
+body{
+margin:0;
+padding:30px 15px 40px 15px;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+/* ===== TITLE AREA ===== */
+h1{
+font-size:30px;
+margin-top:10px;
+margin-bottom:8px;
+}
+
+p{
+margin:0 0 18px 0;
+opacity:0.8;
+}
+
+/* ===== NAVIGATION LINKS (HOME PAGE) ===== */
+body a{
+display:inline-block;
+margin:6px 5px;
+padding:10px 16px;
+border-radius:25px;
+background:#ff4d6d;
+color:white;
+font-size:14px;
+font-weight:500;
+text-decoration:none;
+}
+
+body a:hover{
+background:#ff2f55;
+}
+
+/* ===== MEMORIES PAGE IMAGES ===== */
+
+
+/* ===== MOBILE (IPHONE) ===== */
+@media (max-width:500px){
+
+h1{
+font-size:26px;
+}
+
+img{
+width:45%;
+height:100px;
+}
+
+}
+/* ===== APP STYLE HOME PAGE ===== */
+
+body{
+margin:0;
+padding:20px 15px;
+background:linear-gradient(180deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
+
+/* TITLE */
+h1{
+font-size:30px;
+margin:10px 0 5px 0;
+letter-spacing:1px;
+}
+
+/* SUBTEXT */
+p{
+margin-bottom:20px;
+opacity:0.8;
+font-size:14px;
+}
+
+/* ===== DASHBOARD BUTTON GRID ===== */
+
+body a{
+display:inline-block;
+width:42%;
+margin:6px;
+padding:14px 8px;
+border-radius:18px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(8px);
+
+color:white;
+font-size:14px;
+font-weight:500;
+text-decoration:none;
+
+border:1px solid rgba(255,255,255,0.15);
+
+transition:0.25s;
+}
+
+/* HOVER EFFECT */
+body a:hover{
+transform:translateY(-2px);
+background:rgba(255,255,255,0.15);
+}
+
+
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media (max-width:500px){
+
+h1{
+font-size:26px;
+}
+
+body a{
+width:44%;
+font-size:13px;
+padding:12px 6px;
+}
+
+
+
+}
+/* ===== CLEAN PAGE LAYOUT (removes bottom gap) ===== */
+body{
+margin:0;
+padding:25px 15px;
+background:linear-gradient(180deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
+
+/* ===== TITLE ===== */
+h1{
+margin-top:10px;
+margin-bottom:8px;
+font-size:30px;
+letter-spacing:1px;
+}
+
+p{
+margin-bottom:20px;
+opacity:0.85;
+}
+
+/* ===== NAV BUTTONS (COLORFUL) ===== */
+body a{
+display:inline-block;
+width:44%;
+margin:7px;
+padding:14px 8px;
+border-radius:18px;
+font-size:14px;
+font-weight:600;
+text-decoration:none;
+color:white;
+}
+
+/* different colors for each button */
+body a:nth-of-type(1){background:#ff4d6d;}   /* chat */
+body a:nth-of-type(2){background:#6c63ff;}   /* dates */
+body a:nth-of-type(3){background:#ff9f1c;}   /* love msg */
+body a:nth-of-type(4){background:#2ec4b6;}   /* distance */
+body a:nth-of-type(5){background:#ff6b6b;}   /* voice */
+body a:nth-of-type(6){background:#3a86ff;}   /* memories */
+body a:nth-of-type(7){background:#8338ec;}   /* countdown */
+
+body a:hover{
+transform:scale(1.05);
+filter:brightness(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* UPLOAD INPUT */
+
+#photoInput{
+margin:10px 0;
+color:white;
+}
+
+/* BUTTONS */
+
+.memories-container button{
+background:#ff4d6d;
+border:none;
+color:white;
+padding:10px 16px;
+margin:8px;
+border-radius:20px;
+font-size:14px;
+cursor:pointer;
+}
+
+.memories-container button:hover{
+background:#ff2f55;
+}
+
+/* ===== MOBILE (IPHONE) ===== */
+
+@media (max-width:500px){
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.gallery img{
+height:130px;
+}
+
+.memories-container h1{
+font-size:24px;
+}
+
+}
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#0f172a,#1e293b);
+color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+text-align:center;
+}
+
+/* ===== TITLES ===== */
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+p{
+opacity:0.8;
+margin-bottom:20px;
+}
+
+/* ===== NAV BUTTONS (HOME PAGE) ===== */
+
+body a{
+display:inline-block;
+background:#ff4d6d;
+color:white;
+padding:12px 18px;
+margin:6px;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+transition:0.2s;
+}
+
+body a:hover{
+transform:scale(1.05);
+background:#ff2f55;
+}
+
+
+
+
+
+
+
+/* buttons */
+
+button{
+background:#ff4d6d;
+border:none;
+color:white;
+padding:10px 18px;
+border-radius:25px;
+cursor:pointer;
+margin:5px;
+}
+
+button:hover{
+background:#ff2f55;
+}
+
+/* ===== OTHER PAGES ===== */
+
+.container{
+max-width:700px;
+width:100%;
+}
+
+
+
+
+
+
+/* ===== GALLERY GRID ===== */
+
+
+/* ===== BUTTONS ===== */
+
+.memories-container button{
+background:#ff4d6d;
+color:white;
+border:none;
+padding:10px 16px;
+margin:10px;
+border-radius:20px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* ===== FILE INPUT ===== */
+
+#photoInput{
+margin-top:15px;
+}
+
+/* ===== MOBILE (IPHONE) ===== */
+
+
+
+
+
+
+/* iPhone layout */
+@media (max-width:600px){
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery img{
+height:110px;
+}
+
+}
+/* ===== PAGE BACKGROUND ===== */
+
+body{
+margin:0;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(180deg,#0f172a,#1e293b);
+color:white;
+text-align:center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+padding-top:40px;
+}
+
+/* ===== TITLE ===== */
+
+h1{
+font-size:30px;
+margin-bottom:30px;
+}
+
+
+
+
+
+/* ===== BUTTON ===== */
+
+button{
+margin-top:25px;
+padding:12px 20px;
+border:none;
+border-radius:20px;
+background:#ff4d6d;
+color:white;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff2e55;
+transform:scale(1.05);
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* space between images */
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px; /* same height for all */
+    object-fit: cover; /* crop if needed, keeps it looking good */
+    border-radius: 10px;
+}
+
+/* Optional: on very small phones, make it 1 column */
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 image per row */
+    }
+}

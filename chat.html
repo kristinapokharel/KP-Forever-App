@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Chat - K&P Forever</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+<h1>💬 Chat</h1>
+
+<div id="chatBox" class="chat-box"></div>
+
+<a href="voice.html">
+<button>🎤 Voice Message</button>
+</a>
+
+<div class="chat-input-area">
+<input type="text" id="chatInput" placeholder="Type a love message ❤️">
+<button id="sendBtn">Send 💌</button>
+</div>
+
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyC88R9IMjUX2Q_vgo6yMMKSf12ocZRbRUI",
+authDomain: "kp-forever.firebaseapp.com",
+databaseURL: "https://kp-forever-default-rtdb.firebaseio.com",
+projectId: "kp-forever",
+storageBucket: "kp-forever.firebasestorage.app",
+messagingSenderId: "798002034483",
+appId: "1:798002034483:web:708096f3c6e3f90fecf046"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+let username = prompt("Enter your name");
+
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+const chatBox = document.getElementById("chatBox");
+
+const chatRef = ref(db,"messages");
+
+sendBtn.onclick = () => {
+
+if(chatInput.value.trim() !== ""){
+
+push(chatRef,{
+text: chatInput.value,
+user: username
+});
+
+chatInput.value = "";
+
+}
+
+};
+
+onChildAdded(chatRef,(snapshot)=>{
+
+const data = snapshot.val();
+
+const msg = document.createElement("div");
+msg.classList.add("message");
+
+if(data.user === username){
+msg.classList.add("myMessage");
+}else{
+msg.classList.add("theirMessage");
+}
+
+if(data.text){
+msg.innerHTML = `<span class="username">${data.user}</span><br>${data.text}`;
+}
+
+if(data.voice){
+const audio = document.createElement("audio");
+audio.controls = true;
+audio.src = data.voice;
+msg.appendChild(audio);
+}
+
+chatBox.appendChild(msg);
+chatBox.scrollTop = chatBox.scrollHeight;
+
+});
+
+</script>
+</body>
+</html>
+

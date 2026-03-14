@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Countdown ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:100px;
+}
+
+h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+#timer{
+font-size:50px;
+margin-top:30px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+width:120px;
+text-align:center;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+margin-left:10px;
+}
+
+</style>
+</head>
+
+<body>
+   
+
+<h1>❤️ Countdown Until We Meet ❤️</h1>
+
+
+
+
+
+<div id="timer">Waiting...</div>
+
+<script>
+
+const targetDate = new Date("2026-05-25T08:10:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+const distance = targetDate - now;
+
+const d = Math.floor(distance / (1000*60*60*24));
+const h = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+const m = Math.floor((distance % (1000*60*60))/(1000*60));
+const s = Math.floor((distance % (1000*60))/1000);
+
+document.getElementById("timer").innerHTML =
+d+"d "+h+"h "+m+"m "+s+"s ❤️";
+
+if(distance < 0){
+document.getElementById("timer").innerHTML =
+"❤️ We Finally Meet ❤️";
+}
+
+},1000);
+
+
+
+</script>
+
+</body>
+</html>

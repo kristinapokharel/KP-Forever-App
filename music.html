@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music - K&P Forever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC88R9IMjUX2Q_vgo6yMMKSf12ocZRbRUI",
+  authDomain: "kp-forever.firebaseapp.com",
+  projectId: "kp-forever",
+  storageBucket: "kp-forever.firebasestorage.app",
+  messagingSenderId: "798002034483",
+  appId: "1:798002034483:web:708096f3c6e3f90fecf046"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+</script>
+
+    <div class="music-container">
+        <h1>🎵 Our Songs</h1>
+
+        <div id="playlist" class="playlist">
+            <!-- Songs will appear here -->
+        </div>
+
+        <input type="text" id="songInput" placeholder="Add song name + link...">
+        <button id="addSongBtn">Add Song</button>
+
+        <button onclick="window.location.href='home.html'">⬅ Back Home</button>
+    </div>
+
+    
+ 
+
+    <script src="../script.js"></script>
+</body>
+</html>

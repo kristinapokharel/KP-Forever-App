@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Private Access</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔐 Private Access</h1>
+
+<input type="password" id="secretKey" placeholder="Enter Secret Key">
+
+<br><br>
+
+<button onclick="unlock()">Enter</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function unlock(){
+
+let key = document.getElementById("secretKey").value;
+
+if(key === "kpforever"){
+localStorage.setItem("access","granted");
+window.location.href="index.html";
+}
+else{
+document.getElementById("error").textContent="Wrong key ❤️";
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice Messages - K&P Forever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="voice-container">
+
+<h1>🎤 Voice Messages</h1>
+
+<p class="voice-text">
+Send a sweet voice message to each other ❤️
+</p>
+<div id="chatBox"></div>
+<button id="recordBtn">🎙 Start Recording</button>
+<button id="stopBtn">⏹ Stop Recording</button>
+<button id="sendVoice">Send Voice</button>
+
+<br><br>
+
+<audio id="audioPlayback" controls></audio>
+
+<br><br>
+
+<button onclick="window.location.href='home.html'">⬅ Back Home</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyC88R9IMjUX2Q_vgo6yMMKSf12ocZRbRUI",
+  authDomain: "kp-forever.firebaseapp.com",
+  databaseURL: "https://kp-forever-default-rtdb.firebaseio.com",
+  projectId: "kp-forever",
+  storageBucket: "kp-forever.firebasestorage.app",
+  messagingSenderId: "798002034483",
+  appId: "1:798002034483:web:708096f3c6e3f90fecf046"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+
+
+const db = firebase.database();
+window.db = db;
+
+</script>
+ 
+
+<script src="voice.js"></script>
+</body>
+</html>
